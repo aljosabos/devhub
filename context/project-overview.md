@@ -9,31 +9,31 @@
 
 Developers keep essential knowledge scattered everywhere:
 
-| Where it lives | What gets lost |
-|---|---|
-| VS Code / Notion | Code snippets |
-| Chat history | AI prompts & workflows |
-| Project folders | Context files |
-| Browser bookmarks | Useful links |
-| Random folders | Documentation |
-| `.txt` / `.sh` files | Terminal commands |
-| GitHub Gists | Project templates |
-| Bash history | One-off terminal commands |
+| Where it lives       | What gets lost            |
+| -------------------- | ------------------------- |
+| VS Code / Notion     | Code snippets             |
+| Chat history         | AI prompts & workflows    |
+| Project folders      | Context files             |
+| Browser bookmarks    | Useful links              |
+| Random folders       | Documentation             |
+| `.txt` / `.sh` files | Terminal commands         |
+| GitHub Gists         | Project templates         |
+| Bash history         | One-off terminal commands |
 
 This creates **context switching**, **lost knowledge**, and **inconsistent workflows**.
 
-➡️ Devhub provides one searchable, AI-enhanced hub for all dev knowledge and resources.**
+➡️ Devhub provides one searchable, AI-enhanced hub for all dev knowledge and resources.\*\*
 
 ---
 
 ## 🧑‍💻 Target Users
 
-| Persona | Core Needs |
-|---|---|
-| 👩‍💻 Everyday Developer | Quick access to snippets, commands, and links |
-| 🤖 AI-First Developer | Store prompts, workflows, and context files |
-| 🎓 Content Creator / Educator | Save course notes and reusable code |
-| 🏗️ Full-Stack Builder | Patterns, boilerplates, and API references |
+| Persona                       | Core Needs                                    |
+| ----------------------------- | --------------------------------------------- |
+| 👩‍💻 Everyday Developer         | Quick access to snippets, commands, and links |
+| 🤖 AI-First Developer         | Store prompts, workflows, and context files   |
+| 🎓 Content Creator / Educator | Save course notes and reusable code           |
+| 🏗️ Full-Stack Builder         | Patterns, boilerplates, and API references    |
 
 ---
 
@@ -43,16 +43,16 @@ This creates **context switching**, **lost knowledge**, and **inconsistent workf
 
 Each piece of content is an **Item** with a specific type. System types are available to all users; Pro users can create custom types.
 
-| Icon | Type | Description |
-|---|---|---|
+| Icon  | Type        | Description                                   |
+| ----- | ----------- | --------------------------------------------- |
 | `</>` | **Snippet** | Reusable code blocks with syntax highlighting |
-| `🤖` | **Prompt** | AI prompts and workflow templates |
-| `📝` | **Note** | Markdown notes and documentation |
-| `$_` | **Command** | Terminal commands and shell scripts |
-| `📎` | **File** | Uploaded files (templates, configs, etc.) |
-| `🖼️` | **Image** | Screenshots, diagrams, reference images |
-| `🔗` | **URL** | Links with descriptions and metadata |
-| `✨` | **Custom** | *(Pro only)* User-defined types |
+| `🤖`  | **Prompt**  | AI prompts and workflow templates             |
+| `📝`  | **Note**    | Markdown notes and documentation              |
+| `$_`  | **Command** | Terminal commands and shell scripts           |
+| `📎`  | **File**    | Uploaded files (templates, configs, etc.)     |
+| `🖼️`  | **Image**   | Screenshots, diagrams, reference images       |
+| `🔗`  | **URL**     | Links with descriptions and metadata          |
+| `✨`  | **Custom**  | _(Pro only)_ User-defined types               |
 
 ### B) Collections
 
@@ -63,6 +63,7 @@ Group related items of any type into named collections.
 ### C) Search
 
 Full-text search across:
+
 - Item content
 - Titles
 - Tags
@@ -83,16 +84,16 @@ Full-text search across:
 - 📤 Export as JSON or ZIP
 - 🌑 Dark mode (default)
 
-### F) AI Features *(Pro)*
+### F) AI Features _(Pro)_
 
 Powered by **OpenAI `gpt-4o-mini`**:
 
-| Feature | Description |
-|---|---|
-| 🏷️ Auto-tagging | Automatically suggest relevant tags on save |
-| 📄 AI Summaries | Generate a short description for any item |
-| 🔍 Explain Code | Plain-language explanation of a snippet |
-| ✨ Prompt Optimizer | Improve and refine AI prompts |
+| Feature             | Description                                 |
+| ------------------- | ------------------------------------------- |
+| 🏷️ Auto-tagging     | Automatically suggest relevant tags on save |
+| 📄 AI Summaries     | Generate a short description for any item   |
+| 🔍 Explain Code     | Plain-language explanation of a snippet     |
+| ✨ Prompt Optimizer | Improve and refine AI prompts               |
 
 > **Note on model:** The notes reference `gpt-5-nano` which doesn't exist as of this writing. `gpt-4o-mini` is the closest equivalent — fast, cheap, and well-suited for tagging/summarization workloads. Update this when OpenAI releases newer models.
 
@@ -231,35 +232,35 @@ model ItemTag {
 
 ## 🧱 Tech Stack
 
-| Category | Choice | Notes |
-|---|---|---|
-| Framework | [Next.js 15](https://nextjs.org/) (React 19) | App Router |
-| Language | [TypeScript](https://www.typescriptlang.org/) | Strict mode recommended |
-| Database | [Neon PostgreSQL](https://neon.tech/) + [Prisma ORM](https://www.prisma.io/) | Serverless Postgres |
-| Caching | [Redis](https://redis.io/) / [Upstash](https://upstash.com/) | Optional — rate limiting, sessions |
-| File Storage | [Cloudflare R2](https://developers.cloudflare.com/r2/) | S3-compatible, no egress fees |
-| CSS / UI | [Tailwind CSS v4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) | Dark mode first |
-| Auth | [NextAuth v5 (Auth.js)](https://authjs.dev/) | Email + GitHub provider |
-| AI | [OpenAI API](https://platform.openai.com/) (`gpt-4o-mini`) | Tagging, summaries, explain code |
-| Payments | [Stripe](https://stripe.com/) | Subscriptions + webhooks |
-| Deployment | [Vercel](https://vercel.com/) | Edge-optimized for Next.js |
-| Monitoring | [Sentry](https://sentry.io/) | Error tracking (add in Pro phase) |
-| Syntax Highlighting | [Shiki](https://shiki.style/) | VS Code–quality highlighting |
+| Category            | Choice                                                                            | Notes                              |
+| ------------------- | --------------------------------------------------------------------------------- | ---------------------------------- |
+| Framework           | [Next.js 15](https://nextjs.org/) (React 19)                                      | App Router                         |
+| Language            | [TypeScript](https://www.typescriptlang.org/)                                     | Strict mode recommended            |
+| Database            | [Neon PostgreSQL](https://neon.tech/) + [Prisma ORM](https://www.prisma.io/)      | Serverless Postgres                |
+| Caching             | [Redis](https://redis.io/) / [Upstash](https://upstash.com/)                      | Optional — rate limiting, sessions |
+| File Storage        | [Cloudflare R2](https://developers.cloudflare.com/r2/)                            | S3-compatible, no egress fees      |
+| CSS / UI            | [Tailwind CSS v4](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) | Dark mode first                    |
+| Auth                | [NextAuth v5 (Auth.js)](https://authjs.dev/)                                      | Email + GitHub provider            |
+| AI                  | [OpenAI API](https://platform.openai.com/) (`gpt-4o-mini`)                        | Tagging, summaries, explain code   |
+| Payments            | [Stripe](https://stripe.com/)                                                     | Subscriptions + webhooks           |
+| Deployment          | [Vercel](https://vercel.com/)                                                     | Edge-optimized for Next.js         |
+| Monitoring          | [Sentry](https://sentry.io/)                                                      | Error tracking (add in Pro phase)  |
+| Syntax Highlighting | [Shiki](https://shiki.style/)                                                     | VS Code–quality highlighting       |
 
 ---
 
 ## 💰 Monetization
 
-| | Free | Pro |
-|---|---|---|
-| **Price** | $0 | $8/mo or $72/yr (~25% off) |
-| **Items** | 50 | Unlimited |
-| **Collections** | 3 | Unlimited |
-| **File Uploads** | Images only | All file types |
-| **Custom Item Types** | ❌ | ✅ |
-| **AI Features** | ❌ | ✅ |
-| **Export (JSON / ZIP)** | ❌ | ✅ |
-| **Search** | ✅ | ✅ |
+|                         | Free        | Pro                        |
+| ----------------------- | ----------- | -------------------------- |
+| **Price**               | $0          | $8/mo or $72/yr (~25% off) |
+| **Items**               | 50          | Unlimited                  |
+| **Collections**         | 3           | Unlimited                  |
+| **File Uploads**        | Images only | All file types             |
+| **Custom Item Types**   | ❌          | ✅                         |
+| **AI Features**         | ❌          | ✅                         |
+| **Export (JSON / ZIP)** | ❌          | ✅                         |
+| **Search**              | ✅          | ✅                         |
 
 **Payments:** Stripe Checkout + webhooks to sync `isPro`, `stripeCustomerId`, and `stripeSubscriptionId` on the `User` model.
 
@@ -270,6 +271,13 @@ model ItemTag {
 ## 🎨 UI / UX
 
 **Design inspiration:** [Notion](https://notion.so), [Linear](https://linear.app), [Raycast](https://raycast.com)
+
+### Screenshots
+
+Refer to the screenshots below as a base for the dashboard UI. It does not have to be exact. Use it as a reference:
+
+- @context/screenshots/dashboard-ui-main.png
+- @context/screenshots/dashboard-ui-drawer.png
 
 - 🌑 Dark mode default
 - Minimal, keyboard-friendly, developer-focused
@@ -426,21 +434,21 @@ git switch -c lesson-04-item-crud
 
 ## 📎 Key Resources
 
-| Resource | Link |
-|---|---|
-| Next.js Docs | https://nextjs.org/docs |
-| Prisma Docs | https://www.prisma.io/docs |
-| Neon (Serverless Postgres) | https://neon.tech/docs |
-| Auth.js (NextAuth v5) | https://authjs.dev |
-| Cloudflare R2 | https://developers.cloudflare.com/r2 |
-| shadcn/ui | https://ui.shadcn.com |
-| Tailwind CSS v4 | https://tailwindcss.com/docs |
-| OpenAI API | https://platform.openai.com/docs |
-| Stripe Docs | https://stripe.com/docs |
-| Shiki (Syntax Highlighting) | https://shiki.style |
-| Upstash Redis | https://upstash.com/docs/redis |
-| Vercel Deployment | https://vercel.com/docs |
-| Sentry for Next.js | https://docs.sentry.io/platforms/javascript/guides/nextjs |
+| Resource                    | Link                                                      |
+| --------------------------- | --------------------------------------------------------- |
+| Next.js Docs                | https://nextjs.org/docs                                   |
+| Prisma Docs                 | https://www.prisma.io/docs                                |
+| Neon (Serverless Postgres)  | https://neon.tech/docs                                    |
+| Auth.js (NextAuth v5)       | https://authjs.dev                                        |
+| Cloudflare R2               | https://developers.cloudflare.com/r2                      |
+| shadcn/ui                   | https://ui.shadcn.com                                     |
+| Tailwind CSS v4             | https://tailwindcss.com/docs                              |
+| OpenAI API                  | https://platform.openai.com/docs                          |
+| Stripe Docs                 | https://stripe.com/docs                                   |
+| Shiki (Syntax Highlighting) | https://shiki.style                                       |
+| Upstash Redis               | https://upstash.com/docs/redis                            |
+| Vercel Deployment           | https://vercel.com/docs                                   |
+| Sentry for Next.js          | https://docs.sentry.io/platforms/javascript/guides/nextjs |
 
 ---
 
@@ -449,6 +457,7 @@ git switch -c lesson-04-item-crud
 **🟡 Planning — ready for environment setup and UI scaffolding.**
 
 Next steps:
+
 1. Initialize Next.js project with TypeScript
 2. Configure Prisma + Neon connection
 3. Seed system `ItemType` records
@@ -457,4 +466,4 @@ Next steps:
 
 ---
 
-*Devhub — Store Smarter. Build Faster.* 🗃️
+_Devhub — Store Smarter. Build Faster._ 🗃️
